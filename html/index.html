@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>JavaScript Pokedex</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Pokedex</title>
+      <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+      <link rel="stylesheet" href="../css/styles.css" />
+      <link rel="stylesheet" href="../css/pokedex.css" />
+      <link rel="stylesheet" href="../css/pokemon-detail.css" />
+      <link
+         rel="shortcut icon"
+         href="../assets/pokeball.png"
+         type="image/x-icon"
+      />
 
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/pokedex.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+         rel="stylesheet"
+      />
+   </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <section class="content">
-        <h1 id="title">Pokedex</h1>
-
-        <ol class="pokemons" id="pokemonList">
-            <!-- ..... formato html estático ........
-                 <li class="pokemonId">
-                <span class="number">#001</span>
-                <span class="name">Bulbassaur</span>
-                <div class="details">
-                    <ol class="types">
-                        <li>grass</li>
-                        <li>poison</li>
-                    </ol>
-
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                        alt="Bulbassaur">
-                </div>
-            </li> -->
-
-            <!-- ..... dynamic pokemons here .....-->
-
-        </ol>
-
-        <div class="pagination">
+   <body>
+      <section class="content">
+         <nav class="search-menu">
+            <div class="search-bar">
+               <h1 id="title">Pokedex</h1>
+               <div class="input-container">
+                  <textarea
+                     name=""
+                     id="search-pokemon"
+                     maxlength="30"
+                     rows="1"
+                     type="search"
+                     placeholder="Digite o nome ou ID do Pokémon"
+                  ></textarea>
+                  <img
+                     src="../assets/find.svg"
+                     alt="find-image"
+                     id="input-image"
+                  />
+               </div>
+            </div>
+         </nav>
+         <div class="pokemons-content">
+            <ol class="pokemons" id="pokemonList"></ol>
+            <div class="pokemon-profile">        
+            </div>
+         </div>
+         <div class="pagination">
             <button id="loadMoreButton" type="button">Load more...</button>
-        </div>
-    </section>
+         </div>
+      </section>
 
-    <script src="../js/pokemon-model.js"></script>
-    <script src="../js/poke-api.js"></script>
-    <script src="../js/main.js"></script>
-</body>
-
+      <script src="../js/pokemon-model.js"></script>
+      <script src="../js/poke-api.js"></script>
+      <script src="../js/main.js"></script>
+   </body>
 </html>
