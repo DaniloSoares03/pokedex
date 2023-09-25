@@ -1,0 +1,168 @@
+.top-stats {
+   width: 100%;
+   height: 300px;
+   position: relative;
+   border-radius: 10px 10px 0 0;
+}
+
+
+.top-stats .pokemon-photo {
+   width: 8.5rem;
+   z-index: 10;
+}
+
+.top-stats,
+.bottom-stats {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 auto;
+   gap: .5rem;
+}
+
+.bottom-stats {
+   background-color: white;
+   width: 100%;
+   /* width: 3rem; */
+   position: relative;
+   margin-top: -9rem;
+   border-radius: 3.125rem 3.125rem .625rem .625rem;
+}
+
+.bottom-stats .types {
+   display: flex;
+   margin-top: 2rem;
+}
+
+.bottom-stats .types li {
+   margin-top: 1.2rem;
+}
+
+.list-powers {
+   width: 100%;
+}
+
+
+.list-powers li {
+   display: flex;
+   justify-content: space-between;
+   margin: .5rem;
+}
+
+.stats-power span:not(.power-bar) {
+   text-transform: capitalize;
+   font-size: .8rem;
+}
+
+.stats-power span:nth-child(2) {
+   text-align: center;
+}
+
+.stats-power span {
+   width: 12rem;
+}
+
+.power-bar {
+   width: 100%;
+   border-radius: 10px;
+   height: .5rem;
+   background-color: #d3d3d3;
+   margin: auto 0;
+}
+
+.final-details {
+   height: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   font-size: .85rem;
+   width: 100%;
+   align-content: center;
+}
+
+.left-side,
+.right-side {
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.list-abilitys li:nth-child(n) {
+   color: white;
+   padding: .125rem 0;
+   border-radius: 15px;
+   margin: .625rem;
+}
+
+.left-side {
+   align-self: center;
+}
+
+.left-side li {
+   margin-bottom: .5rem;
+   font-size: .75rem;
+}
+
+.hp {
+   background-color: #15f416;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+.attack {
+   background-color: #ff2764;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+.defense {
+   background-color: #338fa9;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+.special-attack {
+   background-color: #bb2952;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+.special-defense {
+   background-color: #1c5f72;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+.speed {
+   background-color: #ead52a;
+   height: .5rem;
+   border-radius: 10px;
+}
+
+@media screen and (min-width: 376px) {
+   .pokemon-profile {
+      width: 80%;
+      margin: 0 auto;
+   }
+
+   .left-side li {
+      margin-bottom: .5rem;
+      font-size: .75rem;
+   }
+}
+
+@media screen and (min-width: 576px) {
+   .pokemon-profile {
+      width: 60%;
+   }
+}
+
+@media screen and (min-width: 770px) {
+   .pokemon-profile{
+      width: 45%
+   }
+}
+
+@media screen and (min-width: 992px) {
+   .pokemon-profile {
+      width: 35%;
+   }
+}
