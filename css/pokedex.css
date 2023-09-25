@@ -1,40 +1,44 @@
-.pokemonId .details img {
-    max-width: 100%;
-    height: 100%;
-    align-self: flex-end;
-    margin-left: .125rem
-}
-
 /* background-colors pokemons */
 .normal {
     background-color: #A8A77A;
     color: #242301;
+    border: 1px solid #A8A77A;
+    border-radius: 10px;
 }
 
 .grass {
     background-color: #7AC74C;
-    color: #0f2701
+    color: #0f2701;
+    border: 1px solid #7AC74C;
+    border-radius: 10px;
 }
 
 .fire {
     background-color: #EE8130;
-    color: #532908
+    color: #532908;
+    border: 1px solid #EE8130;
+    border-radius: 10px;
 }
 
 .water {
     background-color: #6390F0;
     color: #061b47;
+    border: 1px solid #6390F0;
+    border-radius: 10px;
 }
 
 .electric {
     background-color: #F7D02C;
     color: #3a2f03;
+    border: 1px solid #F7D02C;
+    border-radius: 10px;
 }
 
 .ice {
     background-color: #a8eeea;
     color: #0e726d;
-    
+    border: 1px solid #a8eeea;
+    border-radius: 10px;
 }
 
 li .ice {
@@ -44,61 +48,86 @@ li .ice {
 
 .flying {
     background-color: #A98FF3;
+    color: #6d3bf5;
+    border: 1px solid #A98FF3;
+    border-radius: 10px;
 }
 
 .poison {
     background-color: #a14fa0;
     color: #1b001a;
+    border: 1px solid #a14fa0;
+    border-radius: 10px;
 }
 
 .fighting {
     background-color: #C22E28;
     color: #200101;
+    border: 1px solid #C22E28;
+    border-radius: 10px;
 }
 
 .psychic {
     background-color: #F95587;
     color: #25020c;
+    border: 1px solid #F95587;
+    border-radius: 10px;
 }
 
 .dark {
     background-color: #705746;
     color: #200e02;
+    border: 1px solid #705746;
+    border-radius: 10px;
 }
 
 .rock {
     background-color: #B6A136;
     color: #201b01;
+    border: 1px solid #B6A136;
+    border-radius: 10px;
 }
 
 .bug {
     background-color: #A6B91A;
-    color: #323802
+    color: #323802;
+    border: 1px solid #A6B91A;
+    border-radius: 10px;
 }
 
 .ghost {
     background-color: #735797;
     color: #0e011f;
+    border: 1px solid #735797;
+    border-radius: 10px;
 }
 
 .steel {
     background-color: #B7B7CE;
     color: #02022b;
+    border: 1px solid #B7B7CE;
+    border-radius: 10px;
 }
 
 .ground {
     background-color: #E2BF65;
     color: #251b01;
+    border: 1px solid #E2BF65;
+    border-radius: 10px;
 }
 
 .dragon {
     background-color: #8455fc;
     color: #070118;
+    border: 1px solid #8455fc;
+    border-radius: 10px;
 }
 
 .fairy {
     background-color: #D685AD;
     color: #1f0110;
+    border: 1px solid #D685AD;
+    border-radius: 10px;
 }
 
 .pokemonId {
@@ -106,9 +135,18 @@ li .ice {
     flex-direction: column;
     border-radius: .5rem;
     padding: .5rem;
+    transition: transform .150s;
 }
 
-.pokemonId .name {
+.pokemonId:hover {
+    transform: translate(0px, -3px)
+}
+
+.details .pokemon-photo {
+    cursor: pointer;
+}
+
+.name {
     margin-top: .5rem;
     margin-left: .3rem;
     color: white;
@@ -119,17 +157,15 @@ li .ice {
 .pokemons {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr;
-    /* margin: 0.5rem; */
     padding: 1rem 0 1rem .75rem;
     color: white;
     border-radius: .75rem;
     flex-direction: column;
 }
 
-.pokemonId .number {
+.number {
     text-align: right;
-    font-size: .725rem;
+    font-size: .825rem;
     opacity: 0.8;
     margin: .5rem .125rem 0 0;
 }
@@ -141,46 +177,55 @@ li .ice {
     margin-top: .625rem;
 }
 
+.pokemonId .details img {
+    max-width: 100%;
+    height: 100%;
+    align-self: flex-end;
+    margin-left: .125rem
+}
+
+
 .singleType {
     align-self: start;
     margin: 1.5rem 0;
 }
 
-.pokemonId .details .types li:first-child {
+.types li:first-child {
     filter: brightness(1.1);
 }
 
-.pokemonId .details .types li {
+.types li {
     color: white;
     margin: .350rem .3rem;
-    padding: .2rem;
+    padding: .3rem .5rem;
     font-size: .85rem;
     border-radius: 1rem;
     text-align: center;
     display: table;
 }
 
-.pagination :hover {
+#loadMoreButton:hover,
+#nextPokemonButton:hover {
     cursor: pointer;
 }
 
-.pagination {
+.pagination,
+.next-pokemon {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 1rem;
 }
 
-.pagination button {
+.pagination button,
+.next-pokemon button {
     background-color: #6c79db;
     border-radius: 1rem;
     border: none;
     padding: .6rem;
     color: white;
 }
-
 
 /* bigger screens*/
 
@@ -212,3 +257,5 @@ li .ice {
         padding: .2rem .5rem;
     }
 }
+
+/* grid-template-columns: 1fr; */
